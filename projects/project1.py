@@ -1,7 +1,7 @@
 import pprint
 
 '''
-author = 
+author = David Tichý
 '''
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer, 
