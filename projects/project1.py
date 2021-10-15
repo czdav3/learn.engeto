@@ -44,8 +44,11 @@ SEPARATOR = '-' * 35
 
 # user = input('Account: ')
 # psw = input('Password: ')
+
+# BYPASS LOGIN
 user = 'bob'
 psw = '123'
+##############
 
 if user in users.keys() and str(users[user]) == psw:
     print(SEPARATOR)
@@ -65,7 +68,11 @@ for text in TEXTS:
     print(f'TEXT [{TEXTS.index(text) + 1}]: {text[:30]}...')
 
 # select = input('Please, select your text: ')
+
+# BYPASS SELECT TEXT
 select = '1'
+##############
+
 print(SEPARATOR)
 
 if not select.isdigit():
