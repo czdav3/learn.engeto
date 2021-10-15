@@ -40,14 +40,14 @@ users = {
     'liz': 'pass123',
 }
 
-SEPARATOR = '-' * 35
+SEPARATOR = '-' * 40
 
-# user = input('Account: ')
-# psw = input('Password: ')
+user = input('Account: ')
+psw = input('Password: ')
 
 # BYPASS LOGIN
-user = 'bob'
-psw = '123'
+# user = 'bob'
+# psw = '123'
 ##############
 
 if user in users.keys() and str(users[user]) == psw:
@@ -67,10 +67,10 @@ else:
 for text in TEXTS:
     print(f'TEXT [{TEXTS.index(text) + 1}]: {text[:30]}...')
 
-# select = input('Please, select your text: ')
+select = input('Please, select your text: ')
 
 # BYPASS SELECT TEXT
-select = '1'
+# select = '1'
 ##############
 
 print(SEPARATOR)
@@ -82,7 +82,13 @@ if not select.isdigit():
     quit()
 
 fixedSelect = int(select) - 1
-if fixedSelect > len(TEXTS):
+textsLength = len(TEXTS) - 1
+
+# DEBUG fixedSelect
+# print(fixedSelect)
+# quit()
+
+if fixedSelect > textsLength:
     print(SEPARATOR)
     print('Wrong! This text not exist. Program die...')
     print(SEPARATOR)
@@ -131,12 +137,13 @@ for word in wordsList:
         # print(f'Přičetl jsem do {lenght} plus 1 slovo')
 
 maxStars = sorted(list(lengthWords.values()), reverse=True)[:1]
+maxStarsNum = maxStars[0]
 
 print(SEPARATOR)
 print(
-    f'LEN|',
-    f'OCCURENCES'.center(len(maxStars)),
-    f'|NR.'
+    f'{"LEN|": >5}',
+    f'{"OCCURENCES": <25}',
+    f'{"|NR.": <3}'
     )
 print(SEPARATOR)
 
@@ -144,7 +151,7 @@ for position in sorted(lengthWords.keys()):
     stars = '*' * lengthWords[position]
     
     print(
-        f'{position}|',
-        f'{stars}',
-        f'|{lengthWords[position]}'
+        f'{position: >4}|',
+        f'{stars: <25}',
+        f'|{lengthWords[position]: <3}'
     )
