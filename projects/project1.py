@@ -1,8 +1,10 @@
-import pprint
 
 '''
 author = David Tichý
 '''
+# import pprint
+
+
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer, 
 Fossil Butte is a ruggedly impressive 

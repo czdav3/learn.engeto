@@ -14,8 +14,19 @@ errorMsgs = {
     'sameNums': f'{colRed}!! Warning: typeNumber var have same numbers... !!{colWhite}',
 }
 
+
 def erPrint(where: str) -> print:
     return print(errorMsgs[where])
 
+
 def tipPrint(where: str) -> print:
     return print(tipsMsgs[where])
+
+
+def help():
+    return print(
+        separator,
+        'Nápověda ke hře Bulls and Cows...',
+        separator,
+        sep="\n"
+    )
